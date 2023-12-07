@@ -136,6 +136,7 @@
             justify-content: center;
             list-style: none;
             background-color: rgb(140, 140, 140);
+            z-index: 80;
         }
 
         #mobile_header ul li{
