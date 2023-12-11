@@ -3,6 +3,7 @@
     import { ref } from 'vue'
 
     const gallery = ref('GALLERY')
+    const more = ref('MORE')
 
     /* slide img */
     import gallery_img1 from '@/assets/gallery_img1.jpg';
@@ -52,6 +53,12 @@
 
         </div>
 
+        <div class="more_btn">
+
+            <p>{{ more }}</p>
+
+        </div>
+
     </body>
 
 </template>
@@ -89,6 +96,42 @@
         100% { transform: translateX(-100%); }
     }
 
+    .more_btn p{        
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 0;
+        border-top: solid 1px #544a47;
+        border-right: solid 1px #544a47;
+        border-bottom: solid 1px #544a47;
+        border-left: solid 5px #544a47;
+        color: #544a47;
+        background: #fff;
+        transition: 0.3s ease-in-out;
+    }
+
+    .more_btn p:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 0;
+        display: block;
+        background: #544a47;
+        transition: .3s;
+        left: 0;
+    }
+
+    .more_btn p:hover {
+        color: #fff
+    }
+
+    .more_btn p:hover:before{
+        width: 100%;
+        z-index: -1;
+    }
+
     /* mobile */
     @media(max-width: 480px) {
         
@@ -116,11 +159,19 @@
         }
 
         .slide_container {
-            margin: 25px auto;
+            margin: 0 auto;
+            margin-top: 25px;
         }
 
         .slides {
             gap: 10px;
+        }
+
+        .more_btn p{
+            margin: 10px 10px 10px auto;
+            max-width: 40px;
+            padding: 3px 10px;
+            font-size: x-small;
         }
 
     }
@@ -150,11 +201,18 @@
         }
     
         .slide_container {
-            margin: 60px auto;
+            margin: 0 auto;
+            margin-top: 60px;
         }
 
         .slides {
             gap: 15px;
+        }
+
+        .more_btn p{
+            margin: 30px 90px 30px auto;
+            max-width: 50px;
+            padding: 5px 25px;
         }
 
     }
