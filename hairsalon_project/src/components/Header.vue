@@ -111,6 +111,7 @@
 
         .logo_container{
             display: flex;
+            width: 100%;
             align-items: center;
             justify-content: center;
             flex: 1;
@@ -147,6 +148,7 @@
             font-size: x-small;
             font-weight: bold;
             transition: .5s;
+            cursor: pointer;
         }
 
         #mobile_header ul li:hover{
@@ -232,6 +234,7 @@
             margin: 30px;
             color: #544a47;
             font-size: large;
+            cursor: pointer;
         }
 
         #pc_header ul li::after{

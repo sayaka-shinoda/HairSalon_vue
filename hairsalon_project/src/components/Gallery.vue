@@ -109,6 +109,7 @@
         color: #544a47;
         background: #fff;
         transition: 0.3s ease-in-out;
+        cursor: pointer;
     }
 
     .more_btn p:before {
@@ -168,7 +169,7 @@
         }
 
         .more_btn p{
-            margin: 10px 10px 10px auto;
+            margin: 10px 10px 0px auto;
             max-width: 40px;
             padding: 3px 10px;
             font-size: x-small;
@@ -210,7 +211,7 @@
         }
 
         .more_btn p{
-            margin: 30px 90px 30px auto;
+            margin: 30px 90px 0px auto;
             max-width: 50px;
             padding: 5px 25px;
         }
